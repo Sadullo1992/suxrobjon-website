@@ -1,0 +1,57 @@
+.btn {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &--custom {
+    display: inline-block;
+    padding: 18px 32px;
+    background-color: $primary-gold;
+    color: $bg-grey-black;
+    transition: background-color 0.2s linear;
+    @extend %text-2;
+    font-family: $font-family-500;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    &:hover {
+      background-color: $primary-white;
+    }
+  }
+  &--social {
+    @extend %center;
+    background-color: $bg-grey-black;
+    height: 34px;
+    width: 34px;
+    position: relative;
+    .social__icon {
+      fill: $secondary-white-grey;
+      transition: fill 0.2s linear;
+    }
+    &:hover .social__icon {
+      fill: $primary-gold;
+    }
+    &:hover span {
+      opacity: 1;
+    }
+    span {
+      display: inline-block;
+      height: 34px;
+      padding: 8px 16px;
+      background-color: $bg-grey;
+      position: absolute;
+      left: 100%;
+
+      @extend %text-3;
+      color: $primary-white;
+      opacity: 0;
+      transition: opacity 0.3s linear;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .btn--social {
+    background-color: $bg-grey;
+  }
+}

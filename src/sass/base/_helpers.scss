@@ -1,0 +1,72 @@
+// Container
+.container {
+  max-width: 1080px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+// Section typography
+.section__title__container {
+  @extend %center;
+  gap: 40px;
+  margin: 0 auto;
+}
+.section__line {
+  display: block;
+  width: 160px;
+  height: 10px;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+}
+.section__title {
+  @extend %heading-2;
+  color: $primary-white;
+  white-space: nowrap;
+}
+
+// Center
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 400px;
+    width: 100%;
+    padding: 0;
+  }
+  .section__title__container {
+    gap: 20px;
+  }
+  .section__title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    max-width: 320px;
+    width: 100%;
+    padding: 0;
+  }
+  .section__title__container {
+    position: relative;
+    .section__back__line {
+      display: block;
+      height: 10px;
+      border-bottom: 1px solid 1px solid rgba($color: #fff, $alpha: 0.1);
+      width: 280px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .section__title {
+    position: relative;
+    z-index: 1;
+  }
+  .section__line {
+    display: none;
+  }
+}

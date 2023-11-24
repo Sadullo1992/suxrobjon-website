@@ -1,0 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-black;
+  color: $secondary-white-grey;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

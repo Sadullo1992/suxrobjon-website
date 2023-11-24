@@ -1,0 +1,33 @@
+.footer {
+  padding: 40px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    @extend %text-2;
+    line-height: 1.2;
+  }
+  &__btn__container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding: 20px 0;
+    &__inner {
+      justify-content: center;
+    }
+    &__btn__container {
+      display: none;
+      gap: 7.5px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
